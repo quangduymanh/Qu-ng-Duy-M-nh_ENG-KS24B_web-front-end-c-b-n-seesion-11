@@ -1,0 +1,133 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+.browser-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.browser-buttons {
+    display: flex;
+    gap: 5px;
+}
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.btn.red { background-color: #f0ecec; }
+.btn.yellow { background-color: #f9f8f6; }
+.btn.green { background-color: #ebefec; }
+
+.browser-url {
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 24px;
+    background: white;
+    border-radius: 12px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+}
+.header { background-color: #a8c7fa; width: 100%; height: 150px; }
+.content { background-color: #e8e8e8; width: 100%; height: 100px; }
+.signup { background-color: #a8c7fa; width: 100%; height: 100px; }
+.features {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.boxfeature {
+    flex: 1;
+    height: 150px;
+}
+
+.boxfeature:nth-child(1) { background-color: #f4c987; }
+.boxfeature:nth-child(2) { background-color: #cabdfa; }
+.boxfeature:nth-child(3) { background-color: #f4a6a6; }
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .signup {
+        order: 3;
+    }
+
+    .features {
+        order: 4;
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        width: 50%;
+        height: 150px;
+    }
+
+    .feature:last-child {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .header {
+        order: 1;
+        height: 50px;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .features {
+        order: 3;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    .feature {
+        width: 100%;
+        height: px;
+    }
+
+    .signup {
+        order: 4;
+        width: 100%;
+        height: 100px;
+    }
+    
+}
